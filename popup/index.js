@@ -7,7 +7,10 @@ $(window).on("load", chrome.tabs.reload())
 
 $("#dailyreport").on("click", function () {
     var dt = new Date();
-    var title = dt.getFullYear() + "/" + (dt.getMonth()+1) + "/" + dt.getDate() +" 日報"
+    var year = dt.getFullYear();
+    var month = dt.getMonth()>8 ? (dt.getMonth()+1) : "0" + (dt.getMonth()+1);
+    var day = dt.getDate()>9 ? dt.getDate() : "0" + dt.getDate()  ;
+    var title = year + "/" + month + "/" + day +" 日報"
     var body = "<p><h1>◆テーマ</h1><h1>◆担当者名</h1></p><hr><p><h1>◆今日の目標</h1><h1>◆業務内容</h1>（時系列で）<h1>◆今日の成果</h1><h1>◆気づき・疑問点</h1><h1>◆課題</h1></p><hr><p><h1>◆明日の予定・目標</h1></p>"
     chrome.tabs.sendMessage(
         tabId,
