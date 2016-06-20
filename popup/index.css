@@ -3,9 +3,8 @@ html {
 }
 .title {
     font-size: 20px;
-  background: -webkit-linear-gradient(#cff, #39f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: gray;
+  font-family: cursive;
   text-align: center;
 }
 .button {
