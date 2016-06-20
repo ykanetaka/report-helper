@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "report helper",
+  "description": "Confluenceのテンプレート作成",
+  "version": "1.0",
+  "icons": {
+    "48": "images/ばんそこ48.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/ばんそこ19.png"
+    },
+    "default_title": "report helper",
+    "default_popup": "./popup/index.html"
+  },
+  "author": "yui",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://intra2/pages/*"
+      ],
+      "js": ["./lib/jquery-3.0.0.min.js", "./backend/index.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ]
+}

@@ -1,0 +1,16 @@
+html {
+    font-size: 72.5%;
+}
+.title {
+    font-size: 20px;
+  background: -webkit-linear-gradient(#cff, #39f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.button {
+  margin: 2px auto;
+  width: 100px;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
